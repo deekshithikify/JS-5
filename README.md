@@ -1,1 +1,2 @@
-# JS-5
+# JS
+Functions,classes,inheritance
