@@ -1,0 +1,99 @@
+<head>
+    <title>hello page</title>
+</head>
+<body>
+    <h3>welcome to java script tutorials</h3>
+    <p id="p1"> paragraph</p>
+    <p id="p2"> paragraph</p>
+
+    <script>
+
+        //functions
+
+        function add(v1, v2, flag)
+        {
+            if(flag == true)
+               return v1+v2;
+            else
+               return v1;
+        }
+
+        var n1=10,n2=20;
+        var s1="Deekshith", s2="Surya";
+
+        document.getElementById("p1").innerHTML=add(n1,n2,true);
+        document.getElementById("p2").innerHTML=add(s1,s2,false);
+
+
+        //classes - new data types simularating real world
+        //it will have some data and some operations
+
+        class Employee {
+
+            constructor(id,name)
+            {this.eid=id;
+                this.ename=name;
+            }
+
+            getEmployee()
+            {
+                return this.ename;
+            }
+
+            setEmployee(name)
+            {
+                this.ename=name;
+            }
+        }
+
+        //objects creation
+
+        var e1=new Employee(1, "priya");
+        var e2=new Employee(2,"surya");
+
+        //accessing properties
+
+        document.getElementById("p1").innerHTML=e1.ename;
+        document.getElementById("p2").innerHTML=e2.ename;
+
+        //member functions
+
+        document.getElementById("p1").innerHTML=e1.getEmployee();
+        document.getElementById("p2").innerHTML=e2.getEmployee();
+
+       e1.setEmployee("srushti")
+       e2.setEmployee("Deekshith")
+
+       document.getElementById("p1").innerHTML=e1.getEmployee();
+       document.getElementById("p2").innerHTML=e2.getEmployee();
+
+       //inheritance
+
+       class Manager extends Employee {
+        constructor(id,name,department)
+        {
+            super(id,name);
+            this,dep=department;
+        }
+
+        getDepartment()
+        {
+            return this.dep;
+        }
+
+        setDepartment(dep)
+        {
+            this.dep=dep;
+        }
+
+       }
+       
+       var m1=new Manager(3,"Deekshith surya","IT");
+
+       document.getElementById("p1").innerHTML=m1.ename;
+       document.getElementById("p2").innerHTML=m1.getDepartment();
+       
+       
+
+    </script>
+</body>
